@@ -21,9 +21,9 @@ def read_dbf_field_sizes(
 
 def write_dbf(
         path: str,
-        field_sizes: dict[str, int],
-        values: list[dict[str, str]],
-        now=None,
+        field_sizes: typing.Dict[str, int],
+        values: typing.List[typing.Dict[str, str]],
+        now: typing.Union[datetime.date, None] = None,
         encoding: str = 'GB18030',
 ):
     if now is None:
@@ -67,7 +67,7 @@ def write_dbf(
 
 def read_dbf(
         path: str,
-        include: set = None,
+        include: typing.Union[typing.Set, None] = None,
         encoding: str = 'GB18030',
 ) -> typing.Tuple[typing.List[str], typing.List[typing.List]]:
     with open(path, mode='rb') as fileobj:
