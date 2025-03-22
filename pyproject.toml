@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pydbf"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.7"
+
+
+[[tool.poetry.source]]
+name = "ustc"
+url = "https://mirrors.ustc.edu.cn/pypi/simple/"
+priority = "primary"
+
+
+[[tool.poetry.source]]
+name = "pypiserver"
+url = "http://pypiserver/"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
